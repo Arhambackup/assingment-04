@@ -64,6 +64,27 @@ const filterTabs = {
 
 Object.keys(filterTabs).forEach(id => {
     const tabElement = document.getElementById(id);
-    
+        tabElement.addEventListener('click', (e) => {
+        // Reset tab 
+        document.querySelectorAll('.tab').forEach(t => {
+            t.classList.remove('tab-active', 'bg-blue-600', 'text-white');
+            t.classList.add('bg-white');
+        });
+        
+        // activate current tab all
+        e.target.classList.add('tab-active', 'bg-blue-600', 'text-white');
+        e.target.classList.remove('bg-white');
+
+        // Show/Hide 
+        const targetStatus = filterTabs[id];
+        document.querySelectorAll('.job-card').forEach(card => {
+            const cardStatus = card.getAttribute('data-status');
+            if (targetStatus === 'all' || cardStatus === targetStatus) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
 
 });
