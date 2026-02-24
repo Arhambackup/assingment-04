@@ -51,3 +51,13 @@ jobListContainer.addEventListener('click', (e) => {
         updateAllStats();
     }
 });
+
+/**
+ * Filter Tab
+ */
+const filterTabs = {
+    'filter-all': 'all',
+    'filter-interview': 'interview',
+    'filter-rejected': 'rejected'
+};
+
