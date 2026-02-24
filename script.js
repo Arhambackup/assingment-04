@@ -18,3 +18,36 @@ function updateAllStats() {
     rejectedCountEl.textContent = rCount;
     jobStatLabel.textContent = `${allCards.length} jobs`;
 }
+// All Buttons
+jobListContainer.addEventListener('click', (e) => {
+   
+    const card = e.target.closest('.job-card');
+    if (!card) return;
+
+    const badge = card.querySelector('.status-badge');
+
+    // 1. Delete Button
+    if (e.target.closest('.btn-delete')) {
+        card.classList.add('scale-0', 'opacity-0', 'transition-all', 'duration-300'); // Optional animation
+        setTimeout(() => {
+            card.remove();
+            updateAllStats();
+        }, 300);
+    }
+
+    // 2. Interview Button
+    if (e.target.classList.contains('btn-interview')) {
+        card.setAttribute('data-status', 'interview');
+        badge.textContent = 'Interviewing';
+        badge.className = 'badge status-badge badge-success text-white border-none rounded-md px-3 py-3 text-[10px] font-bold uppercase';
+        updateAllStats();
+    }
+
+    // 3. Rejected Button
+    if (e.target.classList.contains('btn-reject')) {
+        card.setAttribute('data-status', 'rejected');
+        badge.textContent = 'Rejected';
+        badge.className = 'badge status-badge badge-error text-white border-none rounded-md px-3 py-3 text-[10px] font-bold uppercase';
+        updateAllStats();
+    }
+});
