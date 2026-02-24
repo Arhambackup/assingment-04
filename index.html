@@ -34,7 +34,134 @@
         </div>
     </section>
 
-  
+  <section class="max-w-4xl mx-auto p-6 min-h-screen">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-slate-800">Available Jobs</h2>
+            <span id="job-stat-label" class="text-slate-500 text-sm font-medium">8 jobs</span>
+        </div>
+
+        <div class="tabs tabs-boxed bg-transparent gap-2 mb-8">
+            <a id="filter-all" class="tab tab-active bg-blue-600 text-white rounded-md cursor-pointer">All</a> 
+            <a id="filter-interview" class="tab bg-white border border-slate-200 rounded-md cursor-pointer">Interview</a> 
+            <a id="filter-rejected" class="tab bg-white border border-slate-200 rounded-md cursor-pointer">Rejected</a>
+        </div>
+
+        <div id="job-list-container" class="space-y-4">
+            
+            <div class="card job-card bg-white shadow-sm border border-slate-100 p-6 relative" data-status="none">
+                <button class="btn-delete absolute top-4 right-4 text-slate-300 hover:text-error transition-colors"><i class="fa-solid fa-trash-can"></i></button>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-blue-900">Mobile First Corp</h3>
+                    <p class="text-sm font-semibold text-slate-600">React Native Developer</p>
+                    <div class="badge status-badge badge-ghost bg-blue-50 text-blue-700 border-none rounded-md px-3 py-3 text-[10px] font-bold uppercase">Not Applied</div>
+                    <p class="text-sm text-slate-500">Build cross-platform mobile applications using React Native.</p>
+                    <div class="flex gap-2 pt-2">
+                        <button class="btn btn-interview btn-outline btn-success btn-sm lowercase font-normal h-8 min-h-0 px-4">Interview</button>
+                        <button class="btn btn-reject btn-outline btn-error btn-sm lowercase font-normal h-8 min-h-0 px-4">Rejected</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card job-card bg-white shadow-sm border border-slate-100 p-6 relative" data-status="none">
+                <button class="btn-delete absolute top-4 right-4 text-slate-300 hover:text-error transition-colors"><i class="fa-solid fa-trash-can"></i></button>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-blue-900">WebFlow Agency</h3>
+                    <p class="text-sm font-semibold text-slate-600">Web Designer & Developer</p>
+                    <div class="badge status-badge badge-ghost bg-blue-50 text-blue-700 border-none rounded-md px-3 py-3 text-[10px] font-bold uppercase">Not Applied</div>
+                    <p class="text-sm text-slate-500">Create stunning web experiences for high-profile clients.</p>
+                    <div class="flex gap-2 pt-2">
+                        <button class="btn btn-interview btn-outline btn-success btn-sm lowercase font-normal h-8 min-h-0 px-4">Interview</button>
+                        <button class="btn btn-reject btn-outline btn-error btn-sm lowercase font-normal h-8 min-h-0 px-4">Rejected</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card job-card bg-white shadow-sm border border-slate-100 p-6 relative" data-status="none">
+                <button class="btn-delete absolute top-4 right-4 text-slate-300 hover:text-error transition-colors"><i class="fa-solid fa-trash-can"></i></button>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-blue-900">DataViz Solutions</h3>
+                    <p class="text-sm font-semibold text-slate-600">Data Visualization Specialist</p>
+                    <div class="badge status-badge badge-ghost bg-blue-50 text-blue-700 border-none rounded-md px-3 py-3 text-[10px] font-bold uppercase">Not Applied</div>
+                    <p class="text-sm text-slate-500">Transform complex data into compelling visualizations.</p>
+                    <div class="flex gap-2 pt-2">
+                        <button class="btn btn-interview btn-outline btn-success btn-sm lowercase font-normal h-8 min-h-0 px-4">Interview</button>
+                        <button class="btn btn-reject btn-outline btn-error btn-sm lowercase font-normal h-8 min-h-0 px-4">Rejected</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card job-card bg-white shadow-sm border border-slate-100 p-6 relative" data-status="none">
+                <button class="btn-delete absolute top-4 right-4 text-slate-300 hover:text-error transition-colors"><i class="fa-solid fa-trash-can"></i></button>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-blue-900">CloudFirst Inc</h3>
+                    <p class="text-sm font-semibold text-slate-600">Backend Developer</p>
+                    <div class="badge status-badge badge-ghost bg-blue-50 text-blue-700 border-none rounded-md px-3 py-3 text-[10px] font-bold uppercase">Not Applied</div>
+                    <p class="text-sm text-slate-500">Design and maintain scalable backend systems using Python and AWS.</p>
+                    <div class="flex gap-2 pt-2">
+                        <button class="btn btn-interview btn-outline btn-success btn-sm lowercase font-normal h-8 min-h-0 px-4">Interview</button>
+                        <button class="btn btn-reject btn-outline btn-error btn-sm lowercase font-normal h-8 min-h-0 px-4">Rejected</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card job-card bg-white shadow-sm border border-slate-100 p-6 relative" data-status="none">
+                <button class="btn-delete absolute top-4 right-4 text-slate-300 hover:text-error transition-colors"><i class="fa-solid fa-trash-can"></i></button>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-blue-900">Innovation Labs</h3>
+                    <p class="text-sm font-semibold text-slate-600">UI/UX Engineer</p>
+                    <div class="badge status-badge badge-ghost bg-blue-50 text-blue-700 border-none rounded-md px-3 py-3 text-[10px] font-bold uppercase">Not Applied</div>
+                    <p class="text-sm text-slate-500">Create beautiful and functional user interfaces for our products.</p>
+                    <div class="flex gap-2 pt-2">
+                        <button class="btn btn-interview btn-outline btn-success btn-sm lowercase font-normal h-8 min-h-0 px-4">Interview</button>
+                        <button class="btn btn-reject btn-outline btn-error btn-sm lowercase font-normal h-8 min-h-0 px-4">Rejected</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card job-card bg-white shadow-sm border border-slate-100 p-6 relative" data-status="none">
+                <button class="btn-delete absolute top-4 right-4 text-slate-300 hover:text-error transition-colors"><i class="fa-solid fa-trash-can"></i></button>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-blue-900">MegaCorp Solutions</h3>
+                    <p class="text-sm font-semibold text-slate-600">JavaScript Developer</p>
+                    <div class="badge status-badge badge-ghost bg-blue-50 text-blue-700 border-none rounded-md px-3 py-3 text-[10px] font-bold uppercase">Not Applied</div>
+                    <p class="text-sm text-slate-500">Build enterprise applications with JavaScript and modern frameworks.</p>
+                    <div class="flex gap-2 pt-2">
+                        <button class="btn btn-interview btn-outline btn-success btn-sm lowercase font-normal h-8 min-h-0 px-4">Interview</button>
+                        <button class="btn btn-reject btn-outline btn-error btn-sm lowercase font-normal h-8 min-h-0 px-4">Rejected</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card job-card bg-white shadow-sm border border-slate-100 p-6 relative" data-status="none">
+                <button class="btn-delete absolute top-4 right-4 text-slate-300 hover:text-error transition-colors"><i class="fa-solid fa-trash-can"></i></button>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-blue-900">StartupXYZ</h3>
+                    <p class="text-sm font-semibold text-slate-600">Full Stack Engineer</p>
+                    <div class="badge status-badge badge-ghost bg-blue-50 text-blue-700 border-none rounded-md px-3 py-3 text-[10px] font-bold uppercase">Not Applied</div>
+                    <p class="text-sm text-slate-500">Join our fast-growing startup and work on our core platform.</p>
+                    <div class="flex gap-2 pt-2">
+                        <button class="btn btn-interview btn-outline btn-success btn-sm lowercase font-normal h-8 min-h-0 px-4">Interview</button>
+                        <button class="btn btn-reject btn-outline btn-error btn-sm lowercase font-normal h-8 min-h-0 px-4">Rejected</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card job-card bg-white shadow-sm border border-slate-100 p-6 relative" data-status="none">
+                <button class="btn-delete absolute top-4 right-4 text-slate-300 hover:text-error transition-colors"><i class="fa-solid fa-trash-can"></i></button>
+                <div class="space-y-2">
+                    <h3 class="text-lg font-bold text-blue-900">TechCorp Industries</h3>
+                    <p class="text-sm font-semibold text-slate-600">Senior Frontend Developer</p>
+                    <div class="badge status-badge badge-ghost bg-blue-50 text-blue-700 border-none rounded-md px-3 py-3 text-[10px] font-bold uppercase">Not Applied</div>
+                    <p class="text-sm text-slate-500">Build scalable web applications using React and TypeScript.</p>
+                    <div class="flex gap-2 pt-2">
+                        <button class="btn btn-interview btn-outline btn-success btn-sm lowercase font-normal h-8 min-h-0 px-4">Interview</button>
+                        <button class="btn btn-reject btn-outline btn-error btn-sm lowercase font-normal h-8 min-h-0 px-4">Rejected</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
